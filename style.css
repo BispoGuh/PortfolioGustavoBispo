@@ -1,0 +1,539 @@
+/* ESTILO GERAL */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {	
+	height: 100vh;
+    background-color: #000;
+}
+
+/* ESTILO DO CABEÇALHO */
+
+header.center {
+    width: 100%;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 500px;
+    padding: 25px 4%;
+    background-color: #000;
+}
+
+.center .menu-desktop .menu {
+    display: flex;
+    gap: 50px;
+}
+
+.center .logotipo a {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #fff;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+.center .logotipo a:hover {
+    color: rgb(17, 17, 138);
+    border-bottom: solid 2px rgb(17, 17, 138);
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 50%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+
+.center .menu-desktop .menu a {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #fff;
+}
+
+.center .menu-desktop .menu a:hover {
+    color: rgb(17, 17, 138);
+    border-bottom: solid 2px rgb(17, 17, 138);
+}
+
+/* ESTILO DO BANNER */
+
+section.banner {
+    padding: 44px 4%;
+}
+
+.banner {
+    display: flex;
+    gap: 100px;
+    background-image: url(./img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.txt-banner {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    width: 50%;
+    margin-left: 150px;
+    margin-bottom: 30px;
+}
+
+.txt-banner h1 {
+    color: #fff;
+    font-size: 55px; 
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.txt-banner h1, .txt-banner span {
+    display: block;
+}
+
+.txt-banner span {
+    color: #fff;
+    border-bottom: solid 5px rgba(17, 17, 138, 0.644);
+}
+
+.txt-banner p {
+    color: #fff;
+    width: 70%;
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+}
+
+.txt-banner .btn-wpp a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 20px;
+    border: solid 2px #fff;
+    padding: 10px;
+    background-color: rgb(17, 17, 138);
+}
+
+.txt-banner .btn-wpp a:hover {
+    color: rgb(17, 17, 138);
+    background-color: #fff;
+    border: solid 4px #000;
+}
+
+.img-banner img {
+    height: 350px;
+	width: 200px;
+    border-bottom-left-radius: 50%;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+/* ESTILO DO PORTFÓLIO */
+
+section.meu-portfolio {
+	padding: 22px 4%;
+    background-color: #000;
+}
+
+.flex {
+	display: grid;
+    gap: 120px;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 300px);
+    padding: 20px;
+    height: 600px;
+}
+
+.flex .card1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+    padding: 0 0 25px 0;
+    gap: 20px;
+}
+
+.flex .card1 .ver-site a,
+.flex .card2 .ver-site a,
+.flex .card3 .ver-site a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 20px;
+    border: solid 2px #fff;
+    padding: 10px;
+    background-color: rgb(17, 17, 138);
+}
+
+.flex .card1 .ver-site a:hover,
+.flex .card2 .ver-site a:hover,
+.flex .card3 .ver-site a:hover {
+    color: rgb(17, 17, 138);
+    background-color: #fff;
+    border: solid 4px #000;
+}
+
+.flex .card2 {
+    display: flex;
+    flex-direction: column;   
+    align-items: start;
+    padding: 0 0 25px 0;
+    gap: 20px;
+}
+
+.flex .card3 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 0 0 25px 0;
+    gap: 20px;
+}
+
+.meu-portfolio p {
+    color: #fff;
+    margin-top: 30px;
+}
+
+.meu-portfolio h2 {
+	text-align: start;
+	padding: 15px;
+	color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px; 
+}
+
+.portfolio-cards {
+	margin: 10px auto;
+	height: 500px;
+	width: 350px;
+	background-size: cover;
+	background-position: 100% 0%;
+	border-radius: 10px;
+	position: relative;
+    
+}
+
+.portfolio-cards:hover {
+	background-position: 100% 100%;
+	transition: 4s;
+	cursor: pointer;
+}
+
+.portfolio-cards .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(17, 17, 138, 0.644);
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 25px;
+    font-family: "Josefin Sans", sans-serif;
+	font-weight: 700;
+	color: #fff;
+	opacity: 0;
+	transition: .5s;
+}
+
+.portfolio-cards .overlay:hover {
+	opacity: 1;
+}
+
+/* ESTILO DO COMPETÊNCIAS*/
+
+section.competências {
+	padding: 44px 4%;
+    background-color: #000;
+}
+
+.competências h2 {
+	text-align: start;
+	padding: 15px;
+	color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px; 
+}
+
+.competências .topicos {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.competências .topicos .topico-html h3,
+.competências .topicos .topico-css h3,
+.competências .topicos .topico-javascript h3,
+.competências .topicos .topico-git h3,
+.competências .topicos .topico-github h3,
+.competências .topicos .topico-bootstrap h3 {
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 50px; 
+}
+
+.competências .topicos .topico-html p,
+.competências .topicos .topico-css p,
+.competências .topicos .topico-javascript p,
+.competências .topicos .topico-git p,
+.competências .topicos .topico-github p,
+.competências .topicos .topico-bootstrap p  {
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.competências .btn-wpp a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 20px;
+    border: solid 2px #fff;
+    padding: 10px;
+    background-color: rgb(17, 17, 138);
+}
+
+.competências .btn-wpp a:hover {
+    color: rgb(17, 17, 138);
+    background-color: #fff;
+    border: solid 4px #000;
+}
+
+/* ESTILO DO REDES SOCIAIS*/
+
+section.redes-sociais {
+	padding: 22px 4%;
+    border-top: solid 2px rgba(17, 17, 138, 0.644);
+    background-color: #000;
+}
+
+.redes-sociais h3 {
+    text-align: start;
+	padding: 15px;
+	color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px; 
+}
+
+.redes-sociais .icones-redes {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.redes-sociais .icones-redes img,
+.redes-sociais .icones-redes a {
+    height: 50px;
+    width: 80px;
+    border-right: dashed 1px #fff;
+    padding-right: 25px;
+}
+
+.redes-sociais .icones-redes img:hover,
+.redes-sociais .icones-redes a:hover {
+    border-right: dashed 1px rgba(17, 17, 138, 0.644);
+}
+
+/* ESTILO RODAPÉ */
+
+footer .rodape {
+    padding: 5px 20%;
+    background-color: #000;
+}
+
+.direitos {
+    text-align: center;
+    border-top: dashed 1px rgba(17, 17, 138, 0.644);
+    padding: 25px 4%;
+}
+
+.direitos p  {
+    font-size: 17px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.direitos span {
+    font-size: 17px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    margin-top: 5px;
+    color: rgb(28, 28, 230);
+}
+
+@media screen and (max-width: 1240px) {
+    header.center {
+        width: 100%;
+    }
+    
+    .center {
+        width: 100%;
+        padding: 25px 4%;
+        display: inline-block;
+    }
+
+    .logotipo {
+        margin-bottom: 20px;
+        border-bottom: solid 2px rgba(17, 17, 138, 0.644);
+    }
+
+    .center .logotipo a {
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .center .menu-desktop .menu {
+        margin: 0 auto;        
+    }
+
+    .center .menu-desktop .menu a {
+        font-size: 12px;
+    }
+
+    /* ESTILO DO BANNER */
+
+    section.banner {
+        padding: 44px 4%;
+    }
+
+    .banner {
+        gap: 50px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        background-attachment: fixed;
+    }
+
+    .txt-banner {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        width: 70%;
+        margin-left: 10px;
+        margin-bottom: 30px;
+    }
+
+    .txt-banner h1 {
+        font-size: 20px;
+    }
+
+    .txt-banner p {
+        width: 100%;
+        font-size: 20px;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: bold;
+        color: rgb(17, 17, 138);
+        background-color: #fff;
+    }
+
+    .txt-banner .btn-wpp a {
+        font-size: 15px;
+    }
+
+    /* ESTILO DO PORTFÓLIO */
+
+    section.meu-portfolio {
+        padding: 44px 4%;
+        background-color: #000;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        padding: 10px;
+        height: auto;
+    }
+
+    .portfolio-cards {
+        margin: 10px auto;
+        height: 400px;
+        width: 250px;
+    }
+
+    .portfolio-cards .overlay {
+        font-size: 17px;
+    }
+
+    .flex .card1 {
+        margin: 10px auto;
+        height: 400px;
+        width: 250px;
+    }
+
+    .flex .card2 {
+        margin: 10px auto;
+        height: 400px;
+        width: 250px;
+    }
+
+    .flex .card3 {
+        margin: 10px auto;
+        height: 400px;
+        width: 250px;
+    }   
+
+    /* ESTILO DO COMPETÊNCIAS*/
+
+    section.competências {
+        padding: 44px 4%;
+        background-color: #000;
+    }
+
+    .competências .topicos {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    
+    /* ESTILO DO REDES SOCIAIS*/
+
+    section.redes-sociais {
+        padding: 22px 4%;
+        border-top: solid 2px rgba(17, 17, 138, 0.644);
+        background-color: #000;
+    }
+
+    .redes-sociais .icones-redes {
+        display: grid;
+        grid-template-columns: repeat(2, 100px);
+        gap: 50px;
+        padding: 25px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .redes-sociais .icones-redes img,
+    .redes-sociais .icones-redes a {
+        height: 50px;
+        width: 80px;
+        border-right: dashed 1px #fff;
+        padding-right: 25px;
+    }
+}
